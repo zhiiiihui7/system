@@ -1,0 +1,33 @@
+; GROMACS topology — WP_009500922_M21I
+; Protocol: CHARMM36m, TIP3P, 303.15K, NaCl 0.15M
+
+#include "charmm36-jul2022.ff/forcefield.itp"
+
+; CGenFF extra parameters for ligands
+#include "ndp.prm"
+#include "top.prm"
+
+; Ligand topologies (CGenFF)
+#include "ndp.itp"
+#include "top.itp"
+
+; Protein topology (CHARMM36m)
+#include "protein.itp"
+#ifdef POSRE
+#include "posre_protein.itp"
+#endif
+
+; Water and ions
+#include "charmm36-jul2022.ff/tip3p.itp"
+#include "charmm36-jul2022.ff/ions.itp"
+
+[ system ]
+WP_009500922_M21I in water
+
+[ molecules ]
+Protein_chain_A   1
+NDP          1
+TOP          1
+SOL         21049
+NA               69
+CL               61

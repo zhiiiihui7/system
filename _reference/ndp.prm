@@ -1,0 +1,22 @@
+
+[ bondtypes ]
+;      i        j  func           b0           kb
+
+
+[ angletypes ]
+;      i        j        k  func       theta0       ktheta          ub0          kub
+  CG3C51    OG303      PG0     5   120.000000   167.360000   0.23300000     29288.00
+
+
+[ dihedraltypes ]
+;      i        j        k        l  func         phi0         kphi  mult
+  CG3C51   CG3C51    OG303      PG0     9   180.000000    10.460000     1
+    HGA1   CG3C51    OG303      PG0     9     0.000000     0.000000     3
+  CG3C51    OG303      PG0    OG2P1     9     0.000000     0.418400     3
+  CG3C51    OG303      PG0    OG311     9     0.000000     3.974800     2
+  CG3C51    OG303      PG0    OG311     9     0.000000     2.092000     3
+
+
+[ dihedraltypes ]
+; 'improper' dihedrals 
+;      i        j        k        l  func         phi0         kphi
